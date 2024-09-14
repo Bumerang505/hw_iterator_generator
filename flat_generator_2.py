@@ -1,13 +1,10 @@
-# Доработать функцию flat_generator. Должен получиться генератор, который принимает список списков и возвращает их
-# плоское представление. Функция test в коде ниже также должна отработать без ошибок.
-
 import types
 
 
 def flat_generator(list_of_lists):
-    ...
-    yield
-    ...
+    for sublist in list_of_lists:
+        for item in sublist:
+            yield item
 
 
 def test_2():
